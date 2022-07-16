@@ -11,9 +11,9 @@
   --secondary-400: hsl(216, 12%, 54%);
   --secondary-200: hsl(217, 12%, 63%);
 
-  --background-400: hsl(216, 12%, 8%);
+  --background-400: hsl(225, 9%, 9%);
   --background-300: hsl(216, 12%, 13%);
-  --backgound-200: hsl(213, 19%, 18%);
+  --backgound-200: hsl(217, 16%, 15%);
   --background-100: hsl(216, 12%, 21%);
 
   font-size: 15px;
