@@ -44,6 +44,9 @@ main {
   align-items: center;
   justify-content: center;
 }
+button {
+  transition: background-color .3s ease-in;
+}
 
 .card {
   background-color: var(--backgound-200);
@@ -83,15 +86,25 @@ main {
   border: none;
   color: var(--secondary-400);
 }
-.rate:hover, .rate:active, .rate:focus {
+.rate:hover, .rate:active, .rate:focus-visible {
   cursor: pointer;
   background-color: var(--secondary-400);
   color: var(--white);
-  outline: none;
+}
+.rate:focus-visible {
+  outline: 2px solid var(--white);
 }
 .rate.selected {
   background-color: var(--primary);
   color: var(--white);
+}
+.rate.selected:hover, .rate.selected:focus-visible {
+  background-color: var(--white);
+  color: var(--primary);
+}
+.rate.selected:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--primary);
 }
 .btn {
   width: 100%;
@@ -104,10 +117,16 @@ main {
   letter-spacing: 2px;
   font-weight: 700;
 }
-.btn:hover {
+.btn:hover,
+.btn:focus-visible {
   cursor: pointer;
   background-color: var(--white);
   color: var(--primary);
+}
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: var(--background-100);
+  color: var(--backgound-200);
 }
 .result {
   background-color: var(--background-100);
